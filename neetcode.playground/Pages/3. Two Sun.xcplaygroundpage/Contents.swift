@@ -28,12 +28,14 @@ class Solution {
         // 陣列中湊出 target 值
         // 湊出的數字，元素位置
         // n^2
-        nums.forEach { element in
-            for i in nums {
-                
+        var answer = 0
+        for i in nums[0]...nums[nums.count-1] {
+            for j in nums[1]...nums[nums.count-1] {
+                answer = i + j
+                print(answer, i, j)
+                //if answer == target { return [i, j] }
             }
         }
-
         return [0]
     }
 
