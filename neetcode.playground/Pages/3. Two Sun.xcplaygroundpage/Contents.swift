@@ -25,15 +25,13 @@ import Foundation
 
 class Solution {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // 陣列中湊出 target 值
-        // 湊出的數字，元素位置
+        // 從陣列0走，從陣列1走，兩者相加，如果等於 target，回傳i ,j 代表位置
         // n^2
-        var answer = 0
-        for i in nums[0]...nums[nums.count-1] {
-            for j in nums[1]...nums[nums.count-1] {
-                answer = i + j
-                print(answer, i, j)
-                //if answer == target { return [i, j] }
+        for i in 0..<nums.count {
+            for j in i+1..<nums.count {
+                if nums[i] + nums[j] == target {
+                    return [i, j]
+                }
             }
         }
         return [0]
