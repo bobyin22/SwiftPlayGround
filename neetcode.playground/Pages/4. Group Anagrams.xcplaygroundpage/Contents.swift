@@ -20,12 +20,11 @@ class Solution {
     func groupAnagrams(_ strs: [String]) -> [[String]] {
         // 元素中 有沒有 contains 相同
         // 如果有塞成一個陣列
-        for i in 0..<strs.count {
-            print("\(i)",strs[i])
-            for j in i+1..<strs.count {
-                print(strs[j])
-            }
+        let newStrs = strs.map{
+            $0.sorted()
         }
+        print("newArray: ", newStrs)
+        
         return [["X"]]
     }
 }
