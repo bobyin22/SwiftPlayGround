@@ -20,8 +20,9 @@ class Solution {
     func groupAnagrams(_ strs: [String]) -> [[String]] {
         // 元素中 有沒有 contains 相同
         // 如果有塞成一個陣列
+        
         let newStrs = strs.map{
-            $0.sorted()
+            $0.sorted(by: <)
         }
         print("newArray: ", newStrs)
         
