@@ -18,15 +18,18 @@ import Foundation
 
 class Solution {
     func groupAnagrams(_ strs: [String]) -> [[String]] {
-        // 元素中 有沒有 contains 相同
-        // 如果有塞成一個陣列
+        var groups: [String: [String]] = [:]
         
-        let newStrs = strs.map{
-            $0.sorted(by: <)
+        for s in strs {
+            // 將字串的字元排序後再組回字串，作為 key
+            print("s.sorted(): ",s.sorted())    //["a", "c", "t"]
+            let key = String(s.sorted())        //String(["a", "c", "t"]) 會得到 "act"。
+            print("key: ", key)
+            groups[key, default: []].append(s)
         }
-        print("newArray: ", newStrs)
         
-        return [["X"]]
+        //print(groups)
+        return Array(groups.values)
     }
 }
 
