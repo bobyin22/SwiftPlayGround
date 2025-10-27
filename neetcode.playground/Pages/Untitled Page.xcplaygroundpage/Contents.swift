@@ -2,8 +2,8 @@
 
 import Foundation
 
-var greeting:[Character] = ["a","b"]
-print(String(greeting))
+//var greeting:[Character] = ["a","b"]
+//print(String(greeting))
 
 //print(String(["a","b"]))
 
